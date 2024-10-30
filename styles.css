@@ -12,6 +12,7 @@
     height: 100vh;
     background: linear-gradient(135deg, #e63946, #457b9d);
     color: #f1faee;
+    min-height: 101vh
   }
   
   .container {
@@ -91,7 +92,7 @@
  /* Footer Styling */
 #footer {
     position: fixed;
-    bottom: -99px; /* Initially hidden below the viewport */
+    bottom: -165px; /* Initially hidden below the viewport */
     width: 100%;
     padding: 20px;
     background-color: #1d3557;
@@ -140,5 +141,5 @@
   
   /* Slide-in Animation */
   .show-footer {
-    transform: translateY(-100px); /* Brings the footer up into view */
+    transform: translateY(-165px); /* Brings the footer up into view */
   }
