@@ -14,7 +14,7 @@
     color: #f1faee;
     min-height: 101vh
   }
-  
+
   .container {
     text-align: center;
   }
@@ -23,6 +23,22 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
+
+  .title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: titleGlow 1.8s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    to {
+        text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.592);
+    }
+}
 
   .timer-circle {
     position: relative;
@@ -34,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: background 1s linear;
   }
   
@@ -84,9 +100,11 @@
 
   #emptyVoid {
     height:100px;
+    margin-top: 20px;
     background: transparent;
     border: none;
     box-shadow: none;
+    color:#1d3557;
   }
   
  /* Footer Styling */
@@ -119,7 +137,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 15px;
     text-align: left;
   }
   
@@ -141,5 +159,5 @@
   
   /* Slide-in Animation */
   .show-footer {
-    transform: translateY(-165px); /* Brings the footer up into view */
+    transform: translateY(-165px); 
   }

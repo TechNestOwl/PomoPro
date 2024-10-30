@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>PomodoroPro</h1>
+    <h1 class="title">PomodoroPro</h1>
     <div class="timer-circle">
       <span id="timer">25:00</span>
     </div>
@@ -16,8 +16,12 @@
       <button onclick="startTimer()" id="start-btn" class="button">Start</button>
       <button onclick="pauseTimer()" id="pause-btn" class="button">Pause</button>
       <button onclick="resetTimer()" id="reset-btn" class="button">Reset</button>
+      <button onclick="toggleSession()" class="button">Mode</button>
     </div>
-    <div id="emptyVoid"></div>
+    <div id="emptyVoid">
+        <p>Counter:</p>
+        <span id="pomoCount">0</span>
+    </div>
   </div>
   <footer id="footer">
     <div class="footer-content">
