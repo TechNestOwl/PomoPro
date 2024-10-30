@@ -22,4 +22,123 @@
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
- 
+
+  .timer-circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(#a8dadc var(--progress, 0%), #1d3557 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: background 1s linear;
+  }
+  
+  #timer {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f1faee;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.2rem;
+    color: #f1faee;
+    background: #1d3557;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background: #a8dadc;
+    color: #1d3557;
+  }
+  
+  .button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Button Click Animation */
+  .button:focus {
+    animation: pulse 0.3s ease-out;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  #emptyVoid {
+    height:100px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+ /* Footer Styling */
+#footer {
+    position: fixed;
+    bottom: -99px; /* Initially hidden below the viewport */
+    width: 100%;
+    padding: 20px;
+    background-color: #1d3557;
+    color: #f1faee;
+    transition: transform 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  /* Left List */
+  .footer-list {
+    list-style: none;
+    padding-right: 20px;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+  }
+  
+  /* Divider Line */
+  .footer-divider {
+    width: 1px;
+    height: 100%;
+    background-color: #a8dadc;
+    opacity: 0.7;
+  }
+  
+  /* Right Paragraph */
+  .footer-description {
+    padding-left: 20px;
+    flex: 2;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  /* Slide-in Animation */
+  .show-footer {
+    transform: translateY(-100px); /* Brings the footer up into view */
+  }
